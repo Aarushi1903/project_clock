@@ -1,0 +1,131 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins',sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.hero{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg,#08001f,#30197d);
+  color: white;
+  position: relative;
+}
+
+.container{
+  width: 50%;
+  height:18rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.clock{
+  width:100%;
+  height: 100%;
+  background: rgba(235,9,255,0.11);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(40px);
+}
+
+.container::before{
+  content: '';
+  width: 18rem;
+  height: 18rem;
+  background: #f41b75;
+  border-radius: 5px ;
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  z-index: -1 ;
+}
+
+.container::after{
+  content: '';
+   width: 18rem;
+  height: 18rem;
+  background: #419aff;
+  border-radius: 50% ;
+  position: absolute;
+  right: -3rem;
+  bottom: -5rem;
+  z-index: -1 ;
+}
+
+.clock span{
+  font-size: 8rem;
+  width: 11rem;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.clock span::after{
+  content: '';
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#hrs::after{
+  content: 'Hours';
+}
+
+#min::after{
+  content: 'Minutes';
+}
+
+#sec::after{
+  content: 'Seconds';
+}
+
+@media screen and (max-width:500px){
+  html{
+    font-size:30%;
+  }
+
+  .container::before{
+  content: '';
+  width: 14rem;
+  height: 14rem;
+  background: #f41b75;
+  border-radius: 5px ;
+  position: absolute;
+  left: -40px;
+  top: -40px;
+  z-index: -1 ;
+}
+
+  .container::after{
+  content: '';
+   width: 14rem;
+  height: 14rem;
+  background: #419aff;
+  border-radius: 50% ;
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  z-index: -1 ;
+}
+
+  .clock{
+  width:100%;
+  height: 100%;
+  background: rgba(235,9,255,0.11);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(40px);
+}
+
+}
